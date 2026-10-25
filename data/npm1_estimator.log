@@ -1,0 +1,13 @@
+prior_correct.npz (30000, 4)
+prior_misspecified.npz (30000, 4)
+truth patients 4000 relapse 0.376 | ceiling AUC (true growth rate) 0.986
+== library prior_correct.npz (n=30000)
+  blood  standard (days 28, 56)               AUC posterior growth rate 0.705 | P(grow) 0.705 | median effective sample size 16216
+  blood  within-course (days 7, 28, 35, 56)   AUC posterior growth rate 0.886 | P(grow) 0.887 | median effective sample size 833
+  marrow standard (days 28, 56)               AUC posterior growth rate 0.716 | P(grow) 0.715 | median effective sample size 2381
+  marrow within-course (days 7, 28, 35, 56)   AUC posterior growth rate 0.919 | P(grow) 0.921 | median effective sample size 455
+== library prior_misspecified.npz (n=30000)
+  blood  standard (days 28, 56)               AUC posterior growth rate 0.703 | P(grow) 0.702 | median effective sample size 21501
+  blood  within-course (days 7, 28, 35, 56)   AUC posterior growth rate 0.849 | P(grow) 0.833 | median effective sample size 1322
+  marrow standard (days 28, 56)               AUC posterior growth rate 0.711 | P(grow) 0.709 | median effective sample size 2202
+  marrow within-course (days 7, 28, 35, 56)   AUC posterior growth rate 0.896 | P(grow) 0.877 | median effective sample size 354
