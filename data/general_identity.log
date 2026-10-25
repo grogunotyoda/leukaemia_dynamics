@@ -1,0 +1,22 @@
+(i) nu + 1 dose levels recover the drug-free characteristic polynomial
+  n=2 nu=1 (2 levels): max coefficient error 8.0e-16, max error in drug-free growth rate 1.1e-14
+  n=2 nu=2 (3 levels): max coefficient error 2.9e-15, max error in drug-free growth rate 4.5e-14
+  n=3 nu=1 (2 levels): max coefficient error 3.8e-15, max error in drug-free growth rate 3.9e-15
+  n=3 nu=2 (3 levels): max coefficient error 8.4e-15, max error in drug-free growth rate 7.2e-14
+  n=3 nu=3 (4 levels): max coefficient error 6.9e-15, max error in drug-free growth rate 8.1e-14
+  n=4 nu=1 (2 levels): max coefficient error 5.3e-15, max error in drug-free growth rate 5.7e-15
+  n=4 nu=2 (3 levels): max coefficient error 1.1e-14, max error in drug-free growth rate 3.2e-14
+  n=4 nu=3 (4 levels): max coefficient error 1.1e-14, max error in drug-free growth rate 4.1e-13
+  n=5 nu=1 (2 levels): max coefficient error 6.0e-15, max error in drug-free growth rate 4.4e-15
+  n=5 nu=2 (3 levels): max coefficient error 1.4e-14, max error in drug-free growth rate 4.7e-14
+  n=5 nu=3 (4 levels): max coefficient error 1.1e-14, max error in drug-free growth rate 2.6e-13
+  n=6 nu=1 (2 levels): max coefficient error 6.3e-15, max error in drug-free growth rate 4.4e-15
+  n=6 nu=2 (3 levels): max coefficient error 1.2e-14, max error in drug-free growth rate 4.9e-14
+  n=6 nu=3 (4 levels): max coefficient error 1.3e-14, max error in drug-free growth rate 7.3e-14
+
+(ii) nu = 1: poles as k -> infinity and monotone dominant pole
+  n=2: max distance of n-1 poles from the protected-block eigenvalues at k=1e6 2.4e-09; dominant pole decreasing towards that of the protected block: True
+  n=3: max distance of n-1 poles from the protected-block eigenvalues at k=1e6 1.4e-08; dominant pole decreasing towards that of the protected block: True
+  n=4: max distance of n-1 poles from the protected-block eigenvalues at k=1e6 5.1e-09; dominant pole decreasing towards that of the protected block: True
+  n=5: max distance of n-1 poles from the protected-block eigenvalues at k=1e6 7.0e-09; dominant pole decreasing towards that of the protected block: True
+  n=6: max distance of n-1 poles from the protected-block eigenvalues at k=1e6 2.2e-08; dominant pole decreasing towards that of the protected block: True

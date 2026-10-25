@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Regenerates every simulation output in data/ with the seeds used in the manuscript,
-# then the figures. Takes about three hours on two cores.
+# then the figures. Takes about four hours on two cores.
 set -euo pipefail
 cd "$(dirname "$0")"
 mkdir -p data figures results
@@ -21,6 +21,13 @@ python3 npm1_estimator.py build 30000 12 1 10 1e-10 1e-6 data/prior_misspecified
 python3 npm1_estimator.py eval data/npm1_0.5_5.0_1e-11_1e-07.json data/prior_correct.npz data/prior_misspecified.npz \
   | tee data/npm1_estimator.log
 
+# NPM1-AML: timing of the within-course sample and reduced sensitivity at low counts
+python3 npm1_sample_timing.py cohort data/npm1_0.5_5.0_1e-11_1e-07.json data/timing_cohort.npz
+python3 npm1_sample_timing.py build 30000 11 0.5 5 1e-11 1e-7 data/timing_prior_correct.npz
+python3 npm1_sample_timing.py build 30000 12 1 10 1e-10 1e-6 data/timing_prior_misspecified.npz
+python3 npm1_sample_timing.py eval data/timing_cohort.npz data/timing_prior_correct.npz data/timing_prior_misspecified.npz \
+  | tee data/npm1_sample_timing.log
+
 # CML cohorts under exact kinetics
 #   arguments: niche capacity range, dose ratio in the final year, number of patients, seed
 python3 cml_cohort.py 1e-8 1e-4 1.0 1500 2
@@ -30,11 +37,17 @@ for f in data/cml_1e-08_0.0001_1.0_2.json data/cml_1e-09_1e-05_1.0_2.json data/c
   python3 cml_analyse.py "$f" 0.5
 done
 
+# CML: kill on protected cells (incomplete protection)
+python3 cml_incomplete_protection.py | tee data/cml_incomplete_protection.log
+
 # CML de-escalation with qPCR noise and detection limit
 python3 cml_deescalation.py 1e-8 1e-4 400 5
 python3 cml_deescalation.py 1e-10 1e-6 400 6
 for f in data/cml_deesc_1e-08_0.0001_5.json data/cml_deesc_1e-10_1e-06_6.json; do
   python3 cml_deescalation_analyse.py "$f"
 done
+
+# Identification result for n compartments (numerical check)
+python3 general_identity.py | tee data/general_identity.log
 
 python3 make_figures.py

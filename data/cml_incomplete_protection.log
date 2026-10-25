@@ -1,0 +1,7 @@
+eps    AUC two levels   AUC three levels   median eps*kappa/|m|   (mean over niche ranges)
+0.0    0.988            0.988              0.00
+0.001  0.988            0.988              0.04
+0.003  0.987            0.988              0.13
+0.01   0.981            0.988              0.44
+0.03   0.961            0.988              1.31
+0.1    0.913            0.988              4.38

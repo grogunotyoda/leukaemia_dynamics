@@ -6,7 +6,10 @@ leukaemia from response data* (D. Koonthalakadu Baby, R. Geetha Nivas, C. Edward
 The model has two leukaemic compartments, cycling (A) and protected (Q), with treatment acting
 as a kill on A and the measured marker y = A + Q censored at the assay limit. The scripts
 simulate virtual cohorts for NPM1-mutated AML (pulsed chemotherapy) and CML (continuous TKI),
-and evaluate how well different response measurements predict relapse. No patient data are used.
+evaluate how well different response measurements predict relapse, and check the identification
+result for models with more compartments. No patient data are used.
+
+The reference sets (`data/*.npz`) are not tracked because of their size; `run_all.sh` rebuilds them.
 
 ## Requirements
 
@@ -21,8 +24,9 @@ The simulation outputs used in the manuscript are in `data/`. To redraw the figu
     python3 make_figures.py
 
 This writes `figures/*.pdf` and `results/figure_numbers.json`, which holds every number quoted
-from the figures. To regenerate all outputs from scratch with the seeds used in the manuscript
-(about three hours on two cores):
+from the figures. Numbers quoted in the text and tables that are not in a figure are in the logs in
+`data/`. To regenerate all outputs from scratch with the seeds used in the manuscript
+(about four hours on two cores):
 
     ./run_all.sh
 
@@ -35,10 +39,13 @@ from the figures. To regenerate all outputs from scratch with the seeds used in 
 | `npm1_analyse.py` | Calibration statistics, fate by MRD level, AUC of MRD, multiplier and drug-free growth rate | printed |
 | `npm1_second_input.py` | Information added by a second dose level or rest length (exact kinetics) | printed |
 | `npm1_estimator.py` | Model-based estimate of the drug-free growth rate from noisy, censored MRD samples; standard and within-course sampling; correct and misspecified priors | `data/prior_*.npz`, `data/npm1_estimator.log` |
+| `npm1_sample_timing.py` | Timing of the within-course sample (day 7, 14 or 21) and reduced assay sensitivity at low counts; weekly samples through courses 1 and 2 | `data/timing_*.npz`, `data/npm1_sample_timing.log` |
 | `cml_cohort.py` | CML cohort: five years of TKI, stopping at MR4, three-year follow-up; on-treatment eigenvalues at full and half dose | `data/cml_*.json` |
 | `cml_analyse.py` | AUC of on-treatment quantities and the two-level estimate; numerical check of the identity | printed |
 | `cml_deescalation.py` | CML half-dose de-escalation with qPCR noise and detection limit; censored fits | `data/cml_deesc_*.json` |
 | `cml_deescalation_analyse.py` | AUC of depth, slope and the two-level estimate | printed |
+| `cml_incomplete_protection.py` | Two-level and three-level estimates when the drug also kills protected cells | `data/cml_incomplete_protection.log` |
+| `general_identity.py` | Numerical check of the identification result for n compartments and r treated compartments | `data/general_identity.log` |
 | `make_figures.py` | Figures 2 to 7 (Figure 1 is a schematic drawn in the manuscript) | `figures/`, `results/` |
 
 Output file names encode the parameter ranges and seed, for example
