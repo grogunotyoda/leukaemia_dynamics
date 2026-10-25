@@ -1,0 +1,36 @@
+== timing_prior_correct.npz | blood, within-course limit 1e-05
+   end of course only (days 28, 56)     AUC 0.709
+   + day 7 and 35 (end of drug days)    AUC 0.885
+   + day 14 and 42                      AUC 0.869
+   + day 21 and 49                      AUC 0.817
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.891
+== timing_prior_correct.npz | blood, within-course limit 1e-04
+   end of course only (days 28, 56)     AUC 0.709
+   + day 7 and 35 (end of drug days)    AUC 0.861
+   + day 14 and 42                      AUC 0.837
+   + day 21 and 49                      AUC 0.786
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.862
+== timing_prior_correct.npz | blood, within-course limit 1e-03
+   end of course only (days 28, 56)     AUC 0.709
+   + day 7 and 35 (end of drug days)    AUC 0.816
+   + day 14 and 42                      AUC 0.779
+   + day 21 and 49                      AUC 0.736
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.818
+== timing_prior_misspecified.npz | blood, within-course limit 1e-05
+   end of course only (days 28, 56)     AUC 0.706
+   + day 7 and 35 (end of drug days)    AUC 0.853
+   + day 14 and 42                      AUC 0.833
+   + day 21 and 49                      AUC 0.787
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.847
+== timing_prior_misspecified.npz | blood, within-course limit 1e-04
+   end of course only (days 28, 56)     AUC 0.706
+   + day 7 and 35 (end of drug days)    AUC 0.823
+   + day 14 and 42                      AUC 0.797
+   + day 21 and 49                      AUC 0.754
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.816
+== timing_prior_misspecified.npz | blood, within-course limit 1e-03
+   end of course only (days 28, 56)     AUC 0.706
+   + day 7 and 35 (end of drug days)    AUC 0.775
+   + day 14 and 42                      AUC 0.741
+   + day 21 and 49                      AUC 0.712
+   + days 7, 14, 21 and 35, 42, 49      AUC 0.769
