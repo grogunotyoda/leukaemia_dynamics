@@ -1,0 +1,14 @@
+eligible, not cleared: 975, relapse: 0.565
+identity check, max |det_off estimate - det_off|: 2.8189256484623115e-18
+drug-free regime among eligible: {'cure': np.float64(0.062), 'persist': np.float64(0.289), 'grow': np.float64(0.649)}
+AUC for relapse after stopping (higher score = more relapse)
+  level at stopping              0.514
+  years in MR4.5 (negated)       0.598
+  slow slope, full dose          0.448
+  det M, full dose (negated)     0.481
+  slow slope, half dose          0.646
+  two-level det_off (negated)    0.566
+  two-level drug-free growth rate 0.984 | max error vs exact 1.08e-16
+  relapse rate, drug-free regime cure     n=  60: 0.00
+  relapse rate, drug-free regime persist  n= 282: 0.02
+  relapse rate, drug-free regime grow     n= 633: 0.86

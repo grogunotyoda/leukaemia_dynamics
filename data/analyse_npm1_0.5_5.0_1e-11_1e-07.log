@@ -1,0 +1,21 @@
+n 4000 | MRD negative after course 2: 0.817 | 3-year relapse MRD positive 0.811, MRD negative 0.278
+
+MRD after course 2 | n | 3-year relapse | fate shares ['cleared in treatment', 'cure', 'persist', 'grow']
+  undetectable (<1e-5)    3266  0.28  [np.float64(0.03), np.float64(0.44), np.float64(0.22), np.float64(0.31)]
+  1e-5 to 1e-4             218  0.56  [np.float64(0.0), np.float64(0.21), np.float64(0.18), np.float64(0.61)]
+  1e-4 to 1e-3             164  0.74  [np.float64(0.0), np.float64(0.06), np.float64(0.1), np.float64(0.84)]
+  >= 1e-3                  352  1.00  [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(1.0)]
+
+AUC for 3-year relapse
+  MRD after course 2        0.737
+  per-course multiplier mu  0.591
+  drug-free growth rate     0.986
+
+Spearman correlation, log mu vs drug-free growth rate (not cleared): 0.434
+
+Fate among patients MRD negative after course 2
+  cleared in treatment 0.027
+  cure                 0.440
+  persist              0.224
+  grow                 0.309
+  relapse within 3 years: 0.278

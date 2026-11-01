@@ -1,0 +1,7 @@
+patients not cleared: 3912, relapse: 0.384
+  mu, full dose                    cross-validated AUC 0.540
+  mu, full and half dose           cross-validated AUC 0.715
+  mu, 21- and 42-day rest          cross-validated AUC 0.870
+  mu, all three                    cross-validated AUC 0.874
+  MRD after course 2               cross-validated AUC 0.693
+  drug-free growth rate (exact)    cross-validated AUC 0.986

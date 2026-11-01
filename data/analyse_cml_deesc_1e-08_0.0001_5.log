@@ -1,0 +1,7 @@
+eligible 400, relapse 0.59, probe undetectable throughout in 0.72
+  depth at start of de-escalation              AUC 0.685 (n=400)
+  years in MR4.5 (negated)                     AUC 0.597 (n=400)
+  6-month half-dose slope                      AUC 0.673 (n=400)
+  two-level estimate, true kill                AUC 0.697 (n=400)
+  two-level estimate, population-median kill   AUC 0.593 (n=400)
+  exact drug-free growth rate                  AUC 0.981 (n=400)
